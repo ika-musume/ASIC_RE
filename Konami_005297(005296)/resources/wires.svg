@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="23350"
+   height="22856"
+   viewBox="0 0 6178.0208 6047.3169"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
@@ -23,36 +23,42 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.09285015"
-     inkscape:cx="-3414.1033"
-     inkscape:cy="-4415.7171"
+     inkscape:zoom="0.046425075"
+     inkscape:cx="12934.82"
+     inkscape:cy="11911.666"
      inkscape:window-width="2560"
      inkscape:window-height="1506"
      inkscape:window-x="-11"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer6"
-     inkscape:snap-nodes="false" />
+     inkscape:snap-nodes="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs2">
     <rect
-       x="1746.9986"
-       y="9082.2385"
+       x="1746.9987"
+       y="9082.2383"
        width="155.24652"
-       height="276.90911"
+       height="276.90912"
        id="rect417333" />
     <rect
-       x="3802.7027"
+       x="3802.7026"
        y="-6378.3784"
        width="95.945946"
-       height="33.783784"
+       height="33.783783"
        id="rect115860" />
   </defs>
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="power"
-     style="display:none">
+     style="display:inline"
+     transform="translate(2853.5771,2900.7332)">
     <path
        style="opacity:0;fill:none;stroke:#ff0000;stroke-width:2.80001"
        d="m -1732.3399,-2205.6237 161.8064,52.5871"
@@ -142,7 +148,8 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="pads"
-     style="display:inline;opacity:1">
+     style="display:inline;opacity:1"
+     transform="translate(2853.5771,2900.7332)">
     <path
        style="fill:none;stroke:#0000ff;stroke-width:2.80001"
        d="m 437.02801,-2115.757 h 0.0631 l -0.41019,171.1386 1169.69908,-0.5049 -1.0096,109.0441 1080.4698,0.5048 0.8834,4348.1305 114.5971,-0.5049 h 96.2802"
@@ -1805,7 +1812,7 @@
        id="path1075440" />
     <path
        style="fill:none;fill-opacity:1;stroke:#445500;stroke-width:2.80001;stroke-opacity:1"
-       d="m 1440.1219,-945.31594 h -60.6553 v -176.68046 l -4.2785,-0.7551 0,-17.366"
+       d="m 1440.1219,-945.31594 h -60.6553 v -176.68046 l -4.2785,-0.7551 v -17.366"
        id="path1075442" />
     <path
        style="fill:none;fill-opacity:1;stroke:#445500;stroke-width:2.80001;stroke-opacity:1"
@@ -1837,7 +1844,7 @@
        id="path54346" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:2.80001;stroke-opacity:1"
-       d="m -908.06705,-2526.8828 v 207.8889 l -5.03362,1.0068 0,15.1008 h -263.25893 v 346.8172 h -8.5572 l 0,120.8072 h -21.6446 l 0,352.8575 h -37.7522 l 0,240.1042 h -323.6625 v 69.4641"
+       d="m -908.06705,-2526.8828 v 207.8889 l -5.03362,1.0068 v 15.1008 h -263.25893 v 346.8172 h -8.5572 v 120.8072 h -21.6446 v 352.8575 h -37.7522 v 240.1042 h -323.6625 v 69.4641"
        id="path54348" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:2.80001;stroke-opacity:1"
@@ -1869,7 +1876,7 @@
        id="path54362" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:2.80001;stroke-opacity:1"
-       d="m -2489.7406,-1473.2004 h 192.203 v -320.6942 h 50.5422 v 699.0798 h 128.3401 l 0.5539,2.0674 h 44.4971 l 0,-42.3364"
+       d="m -2489.7406,-1473.2004 h 192.203 v -320.6942 h 50.5422 v 699.0798 h 128.3401 l 0.5539,2.0674 h 44.4971 v -42.3364"
        id="path54364" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:2.80001;stroke-opacity:1"
@@ -2049,7 +2056,7 @@
        id="path1912747" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:2.80001;stroke-opacity:1"
-       d="m 1259.5974,-1172.7026 v -183.8644 h 6.5486 l 0,-947.028 H 368.48452 v -58.4336 h 401.4347 v -135.8009"
+       d="m 1259.5974,-1172.7026 v -183.8644 h 6.5486 v -947.028 H 368.48452 v -58.4336 h 401.4347 v -135.8009"
        id="path1912749" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:2.80001;stroke-opacity:1"
@@ -2057,7 +2064,7 @@
        id="path1912751" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:2.80001;stroke-opacity:1"
-       d="m 1266.0201,-2303.5949 h 573.2541 v -30.4762 h 732.8132 l 0,-33.3727 h 31.1059 l 0,-154.7735"
+       d="m 1266.0201,-2303.5949 h 573.2541 v -30.4762 h 732.8132 v -33.3727 h 31.1059 v -154.7735"
        id="path1912753" />
     <path
        style="fill:none;fill-opacity:1;stroke:#ffff00;stroke-width:2.80001;stroke-opacity:1"
@@ -2108,7 +2115,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="clock network"
-     style="display:inline;opacity:1">
+     style="display:inline;opacity:1"
+     transform="translate(2853.5771,2900.7332)">
     <path
        style="fill:none;fill-opacity:1;stroke:#ffcc00;stroke-width:2.80001;stroke-opacity:1"
        d="m 595.54453,-1937.755 v 12.5934 l 3.77804,1.1334 v 14.4825"
@@ -3339,7 +3347,8 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="logic wires"
-     style="display:inline;opacity:1">
+     style="display:inline;opacity:1"
+     transform="translate(2853.5771,2900.7332)">
     <path
        style="fill:none;stroke:#445500;stroke-width:2.80001"
        d="m 706.9288,-2123.8897 v 13.3441 l 1.86197,0.931 v 153.6127 h 271.22729 v -158.5779 l 0.93099,-1.2413 v -8.9996"
@@ -14235,7 +14244,8 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="logic cells"
-     style="display:inline;opacity:0.38510638">
+     style="display:inline;opacity:0.385106"
+     transform="translate(2853.5771,2900.7332)">
     <text
        xml:space="preserve"
        style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -29035,13 +29045,13 @@
          y="1518.0005">DSR2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;display:inline;stroke-width:0.264583;fill:#5599ff"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;display:inline;fill:#5599ff;stroke-width:0.264583"
        x="1720.2218"
        y="1518.0005"
        id="text394453-32"><tspan
          sodipodi:role="line"
          id="tspan394451-72"
-         style="stroke-width:0.264583;fill:#5599ff"
+         style="fill:#5599ff;stroke-width:0.264583"
          x="1720.2218"
          y="1518.0005">DSR2</tspan></text>
     <rect
@@ -51250,7 +51260,8 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="cell number"
-     style="opacity:1">
+     style="opacity:1"
+     transform="translate(2853.5771,2900.7332)">
     <text
        xml:space="preserve"
        style="font-size:11.2889px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -53212,6 +53223,6 @@
   </g>
   <path
      style="fill:none;fill-opacity:1;stroke:#445500;stroke-width:2.80001;stroke-opacity:1"
-     d="M 490.89291,130.4682 V 17.1271 h 82.86493 v 85.88737 l 3.02244,1.25934 v 18.38645"
+     d="m 3344.47,3031.2014 v -113.3411 h 82.8649 v 85.8874 l 3.0225,1.2593 v 18.3865"
      id="path940142" />
 </svg>
