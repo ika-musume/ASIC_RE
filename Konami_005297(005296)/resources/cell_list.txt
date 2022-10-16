@@ -1,0 +1,60 @@
+
+//dynamic shift register
+DSR1 = Dynamic Shift Register fast 1 bit (4MHz)
+DSR2 = Dynamic Shift Register 1 bit
+DSR3 = Dynamic Shift Register slow 1 bit
+
+//dynamic latch
+DTL1 = Dynamic Togglable Latch fast (4MHz)
+DTL2 = Dynamic Togglable Latch fast
+DDL = Dynamic D Latch with positive en
+
+//static latch
+DL = D Latch with negative en
+SRNANDN = SR latch NAND type with Negative output
+SRNORN = SR latch NOR type with Negative output
+
+//function selector
+FSEL1 = Function SELector 1 ; sel=0, x=a^b y=~(a&b) ; sel=1, x=~(a^b) y=~(a|b)
+
+//logic
+TSBI = Tri-State Buffer Indirect
+TSBN = Tri-State Buffer Negative
+
+NOT = NOT
+NOTP = NOT Power
+NOTL = NOT Lower leakage
+
+NAND2
+NAND3
+NAND4
+NAND6
+
+NOR2
+NOR3
+NOR4
+NOR8 = NOR 8 input
+
+AND2 = AND 2 input
+AND3
+AND6 = AND 6 input
+
+OR2
+OR3
+OR4
+OR6
+OR8
+
+AND2OR2 = (A&B)|(C&D)
+AND2OR3 = (A&B)|(C&D)|(E&F)
+AND3OR4 = (A&B&C)|(E&E&F)|(G&H&I)|(J&K&L)
+AND3OR2 = (A&B&C)|(E&E&F)
+AND2OR8 = (A&B)|(C&D)|(E&F)|(G&H)|(I&J)|(K&L)|(M&N)|(O&P)
+
+AOI22 = 
+AOI221 = AND-OR-INVERT 4 input with Strobe (/EN = 1, Y = 0)
+AOI21 = ~(OR IN | &(IN1, IN2))
+AOI31 = ~(OR IN | &(IN1, IN2, IN3))
+
+OAI21 = ~(AND IN & |(IN1, IN2))
+OAI31
