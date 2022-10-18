@@ -12,6 +12,7 @@ ASIC reverse engineering
 |Yamaha|Yamaha|Y8950|MSX-AUDIO|FM sound|preparing|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|decapped|
 |NEC|Taito|TC0030CMD|Taito C-Chip|security MCU|all complete(embargoed)|
+|NEC|Sega|315-5211|System 1|sprite engine|WIP|
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|preparing|
 |Toshiba|Taito|TC0640FDP|F3|PPU|decapped|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
