@@ -1,21 +1,3 @@
-/*
-    Copyright (C) 2022 Sehyeon Kim(Raki)
-    
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of the GNU General Public License
-    as published by the Free Software Foundation; either version 2
-    of the License, or any later version.
-    
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-    
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-*/
-
 module K005297
 (
     //master clock
@@ -86,7 +68,7 @@ module K005297
 );
 
 /*
-    Verilog HDL model programmed by Sehyeon Kim(Raki), All .v source files in the K005297 directory are distributed as GPLv2.
+    Verilog HDL model programmed by Sehyeon Kim(Raki), All .v source files in the K005297 directory are distributed as BSD-2.
     GitHub @ika-musume, Twitter @RCAVictorCo
 
 
@@ -219,7 +201,7 @@ wire            SYS_RUN_FLAG_RST_n;
 wire            FSMERR_RESTART_n, BOOTERR_RESTART_n;
 wire            CLK2M_STOP_n, CLK2M_STOP_DLYD_n; //for tempdet
 
-mdl_supervisor supervisor_main (
+K005297_supervisor supervisor_main (
     .i_MCLK                     (i_MCLK                     ),
 
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
@@ -270,7 +252,7 @@ wire            CMD_ACCEPTED_n;
 //bubble related
 wire            BDI, BDI_EN; //bubble input stream
 
-//Synchronization Pattern Detector(MDL_SPDET)
+//Synchronization Pattern Detector(K005297_SPDET)
 wire            SYNCTIP_n, SYNCED_FLAG, SYNCED_FLAG_SET_n;
 
 //Cycle Counter
@@ -366,7 +348,7 @@ wire            UMODE_SET_n;
 wire            UMODE_n, BMODE_n;
 wire            ALD_nB_U;
 
-mdl_accmodeflag accmodeflag_main (
+K005297_accmodeflag accmodeflag_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -546,7 +528,7 @@ SRNAND primitive_H30 (.i_CLK(i_MCLK), .i_CEN_n(CLK2P_n), .i_S_n(~((ACC_END | ~SY
 ////
 
 //BUBBLE CONTROL FRONTEND
-mdl_bubctrlfe bubctrlfe_main (
+K005297_bubctrlfe bubctrlfe_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -570,7 +552,7 @@ mdl_bubctrlfe bubctrlfe_main (
 );
 
 //BUBBLE READ FRONTEND
-mdl_bubrdfe bubrdfe_main (
+K005297_bubrdfe bubrdfe_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -588,7 +570,7 @@ mdl_bubrdfe bubrdfe_main (
 );
 
 //BUBBLE WRITE FRONTEND
-mdl_bubwrfe bubwrfe_main (
+K005297_bubwrfe bubwrfe_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -618,7 +600,7 @@ mdl_bubwrfe bubwrfe_main (
 //////  SYNCHRONIZATION PATTERN DETECTOR
 ////
 
-mdl_spdet spdet_main (
+K005297_spdet spdet_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -646,7 +628,7 @@ mdl_spdet spdet_main (
 //////  CYCLE COUNTER
 ////
 
-mdl_cyclecntr cyclecntr_main (
+K005297_cyclecntr cyclecntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -665,7 +647,7 @@ mdl_cyclecntr cyclecntr_main (
 //////  FUNCTION TRIGGER
 ////
 
-mdl_functrig functrig_main (
+K005297_functrig functrig_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -696,7 +678,7 @@ mdl_functrig functrig_main (
 //////  MASK LOAD TIMER
 ////
 
-mdl_mskldtimer mskldtimer_main (
+K005297_mskldtimer mskldtimer_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -718,7 +700,7 @@ mdl_mskldtimer mskldtimer_main (
 //////  MASK(ERROR MAP) REGISTER
 ////
 
-mdl_mskreg mskreg_main (
+K005297_mskreg mskreg_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -743,7 +725,7 @@ mdl_mskreg mskreg_main (
 //////  DATA LENGTH COUNTER
 ////
 
-mdl_dlcntr dlcntr_main (
+K005297_dlcntr dlcntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -766,7 +748,7 @@ mdl_dlcntr dlcntr_main (
 //////  BYTE ACQUISITION COUNTER
 ////
 
-mdl_byteacqcntr byteacqcntr_main (
+K005297_byteacqcntr byteacqcntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -791,7 +773,7 @@ mdl_byteacqcntr byteacqcntr_main (
 //////  DATA LENGTH EVALUATOR
 ////
 
-mdl_dleval dleval_main (
+K005297_dleval dleval_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -820,7 +802,7 @@ mdl_dleval dleval_main (
 //////  SUPPLEMENTARY BUBBLE DATA LENGTH COUNTER
 ////
 
-mdl_supbdlcntr supbdlcntr_main (
+K005297_supbdlcntr supbdlcntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -848,7 +830,7 @@ mdl_supbdlcntr supbdlcntr_main (
 //////  PAGE REGISTER
 ////
 
-mdl_pgreg pgreg_main (
+K005297_pgreg pgreg_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -876,7 +858,7 @@ mdl_pgreg pgreg_main (
 //////  ABSOLUTE PAGE COUNTER
 ////
 
-mdl_abspgcntr abspgcntr_main (
+K005297_abspgcntr abspgcntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -897,7 +879,7 @@ mdl_abspgcntr abspgcntr_main (
 //////  PAGE COMPARATOR
 ////
 
-mdl_pgcmp pgcmp_main (
+K005297_pgcmp pgcmp_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -920,7 +902,7 @@ mdl_pgcmp pgcmp_main (
 //////  INVALID PAGE DETECTOR
 ////
 
-mdl_invalpgdet invalpgdet_main (
+K005297_invalpgdet invalpgdet_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -945,7 +927,7 @@ mdl_invalpgdet invalpgdet_main (
 //////  DMA OUTLATCH LOAD CONTROL
 ////
 
-mdl_dmadregldctrl dmadregldctrl_main (
+K005297_dmadregldctrl dmadregldctrl_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -986,7 +968,7 @@ mdl_dmadregldctrl dmadregldctrl_main (
 //////  DMA TIMINGS
 ////
 
-mdl_dmatiming dmatiming_main (
+K005297_dmatiming dmatiming_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1024,7 +1006,7 @@ mdl_dmatiming dmatiming_main (
 //////  DMA FRONTEND
 ////
 
-mdl_dmafe dmafe_main (
+K005297_dmafe dmafe_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1057,7 +1039,7 @@ mdl_dmafe dmafe_main (
 //Address Latch Enable
 assign          o_ALE = DMA_ACT & ROT8[1];
 
-mdl_busctrlfe busctrlfe_main (
+K005297_busctrlfe busctrlfe_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1082,7 +1064,7 @@ mdl_busctrlfe busctrlfe_main (
 //////  INVALID PAGE DATA GENERATOR(DATA SCRAMBLER)
 ////
 
-mdl_invalpgdgen invalpgdgen_main (
+K005297_invalpgdgen invalpgdgen_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1119,7 +1101,7 @@ mdl_invalpgdgen invalpgdgen_main (
 //////  DMA DATA REGISTER
 ////
 
-mdl_dmadreg dmadreg_main (
+K005297_dmadreg dmadreg_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1153,7 +1135,7 @@ mdl_dmadreg dmadreg_main (
 //////  DMA ADDRESS COUNTER
 ////
 
-mdl_dmaaddrcntr dmaaddrcntr_main (
+K005297_dmaaddrcntr dmaaddrcntr_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1180,7 +1162,7 @@ mdl_dmaaddrcntr dmaaddrcntr_main (
 
 //CRC14 Polynomial = X^14 + X^5 + X^4 + 1
 
-mdl_z14eval z14eval_main (
+K005297_z14eval z14eval_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1226,7 +1208,7 @@ mdl_z14eval z14eval_main (
 //////  TIMER25K
 ////
 
-mdl_timer25k timer25k_main (
+K005297_timer25k timer25k_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1248,7 +1230,7 @@ mdl_timer25k timer25k_main (
 //////  CHECKSUM COMPARATOR
 ////
 
-mdl_sumcmp sumcmp_main (
+K005297_sumcmp sumcmp_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1281,7 +1263,7 @@ mdl_sumcmp sumcmp_main (
 //////  TEMPERATURE DETECTOR
 ////
 
-mdl_tempdet tempdet_main (
+K005297_tempdet tempdet_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
@@ -1319,7 +1301,7 @@ ASYNCDL primitive_N31 (.i_SET(~(CMDREG_RST_n & SYS_RUN_FLAG)), .i_EN(ASYNC_LATCH
 ////
 
 
-mdl_fsm fsm_main (
+K005297_fsm fsm_main (
     .i_MCLK                     (i_MCLK                     ),
     .i_CLK4M_PCEN_n             (CLK4P_n                    ),
     .i_CLK2M_PCEN_n             (CLK2P_n                    ),
