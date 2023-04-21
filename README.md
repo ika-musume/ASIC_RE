@@ -6,8 +6,8 @@ ASIC reverse engineering
 |Manufacturer|Orderer|P/N|found on|role|status|
 |------------|-------|---|--------|----|------|
 |Yamaha|Konami|005297|Bubble System|BMC|all complete|
-|Yamaha|Yamaha|YM3438|OPN2C|FM sound|WIP - see [IKA3438]( https://github.com/ika-musume/IKA3438 )|
-|Yamaha|Yamaha|YM2151|OPM|FM sound|WIP - see [IKA2151]( https://github.com/ika-musume/IKA2151 )|
+|Yamaha|Yamaha|YM3438|OPN2C|FM sound|WIP - see [IKAOPN]( https://github.com/ika-musume/IKAOPN )|
+|Yamaha|Yamaha|YM2151|OPM|FM sound|WIP - see [IKAOPM]( https://github.com/ika-musume/IKAOPM )|
 |Yamaha|Yamaha|YM3812|OPL2|FM sound|preparing|
 |Yamaha|Yamaha|Y8950|MSX-AUDIO|FM sound|preparing|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|decapped|
