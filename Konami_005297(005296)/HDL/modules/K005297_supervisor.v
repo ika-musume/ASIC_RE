@@ -252,7 +252,7 @@ end
 endmodule
 
 
-module subK005297_rot8
+module supervisor_submdl_rot8
 (
     input   wire            i_CLK,
     input   wire            i_CEN_n,
@@ -274,22 +274,22 @@ end
 endmodule
 
 
-module subK005297_rot8
+module supervisor_submdl_rot20
 (
     input   wire            i_CLK,
     input   wire            i_CEN_n,
 
-    input   wire            i_STOP_n,
-    output  wire    [7:0]   o_ROT8
+    input   wire            i_STOP,
+    output  wire    [19:0]  o_ROT20_n
 );
 
-reg     [7:0]   SR8 = 8'b0;
-assign  o_ROT8 = SR8;
+reg     [19:0]  SR20 = 20'b0000_0001_0000_0010_0000;
+assign  o_ROT20_n = ~SR20;
 
 always @(posedge i_CLK) begin
     if(~i_CEN_n) begin
-        SR8[7:1] <= SR8[6:0];
-        SR8[0] <= ~|{SR8[6:0], ~i_STOP_n}; //A55 NOT
+        SR20[19:1] <= SR20[18:0];
+        SR20[0] <= ~|{SR20[18:0], i_STOP};
     end
 end
 

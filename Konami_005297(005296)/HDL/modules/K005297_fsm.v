@@ -267,7 +267,7 @@ assign  o_CMD_ACCEPTED_n =    ~&{~command_a_1[1], ~command_a_1[0], command_a_en[
 endmodule
 
 
-module subK005297_pla
+module fsm_submdl_pla
 (
     input   wire            i_A,
     input   wire            i_B,
