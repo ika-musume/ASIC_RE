@@ -17,8 +17,10 @@ ASIC reverse engineering
 |NEC|Taito|TC0030CMD|Taito C-Chip|security chip|**all complete**(embargoed)|
 |NEC|Sega|315-5012|System 1|sprite engine|**all complete**|
 |NEC|Sega|315-5211|Outrun|sprite engine|WIP|
-|NEC|Seta|X1-001A|TNZS|sprite engine|now imaging|
-|NEC|Seta|X1-002A|TNZS|sprite engine|now imaging|
+|NEC|Seta|X1-001A|TNZS|sprite engine|WIP|
+|NEC|Seta|X1-002A|TNZS|sprite engine|WIP|
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|**all complete** - see [IKASCC]( https://github.com/ika-musume/IKASCC )|
-|Toshiba|Taito|TC0640FDP|F3|PPU|now imaging|
+|Toshiba|Taito|TC0640FDP|F3|PPU|WIP|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
+|Fujitsu|Konami|007644|Twin16|bus latch|**all complete**|
+|Fujitsu|Konami|007787|Twin16|pixel SR|**all complete**|
