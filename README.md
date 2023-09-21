@@ -7,11 +7,11 @@ ASIC reverse engineering
 |------------|-------|---|--------|----|------|
 |Yamaha|Konami|005297|Bubble System|BMC|**all complete**|
 |Fujitsu|Fujitsu|MB14506|Bubble System|Timings|**all complete**|
-|Yamaha|Yamaha|YM3438|OPN2C|FM sound|WIP - see [IKAOPN]( https://github.com/ika-musume/IKAOPN )|
-|Yamaha|Yamaha|YM2151|OPM|FM sound|**all complete** - see [IKAOPM]( https://github.com/ika-musume/IKAOPM )|
-|Yamaha|Yamaha|YM3812|OPL2|FM sound|WIP - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
-|Yamaha|Yamaha|YM2413|OPLL|FM sound|decapped - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
-|Yamaha|Yamaha|Y8950|MSX-AUDIO|FM sound|preparing|
+|Yamaha|Yamaha|YM3438|OPN2C|FM synth|WIP - see [IKAOPN]( https://github.com/ika-musume/IKAOPN )|
+|Yamaha|Yamaha|YM2151|OPM|FM synth|**all complete** - see [IKAOPM]( https://github.com/ika-musume/IKAOPM )|
+|Yamaha|Yamaha|YM3812|OPL2|FM synth|WIP - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
+|Yamaha|Yamaha|YM2413|OPLL|FM synth|decapped - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
+|Yamaha|Yamaha|Y8950|MSX-AUDIO|FM synth|preparing|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|**all complete**(embargoed)|
 |Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|WIP|
 |NEC|Taito|TC0030CMD|Taito C-Chip|security chip|**all complete**(embargoed)|
@@ -23,4 +23,5 @@ ASIC reverse engineering
 |Toshiba|Taito|TC0640FDP|F3|PPU|WIP|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
 |Fujitsu|Konami|007644|Twin16|bus latch|**all complete**|
+|OKI|Konami|007785|Twin16|sprite addr gen|**all complete**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**all complete**|
