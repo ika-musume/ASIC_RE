@@ -24,6 +24,6 @@ ASIC reverse engineering
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|**all complete** - see [IKASCC]( https://github.com/ika-musume/IKASCC )|
 |Toshiba|Taito|TC0640FDP|F3|PPU|Pending|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
-|OKI|Konami|007781|Twin16|pixel SR|WIP|
+|OKI|Konami|007781|Twin16|pixel SR|**all complete**|
 |OKI|Konami|007785|Twin16|sprite addr gen|**all complete**|
 |Sharp|Konami|005292|Bubble System|video timings|**all complete**|
