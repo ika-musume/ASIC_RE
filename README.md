@@ -16,7 +16,7 @@ ASIC reverse engineering
 |Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|WIP|
 |Fujitsu|Sega|315-5211|Outrun|sprite engine|WIP|
 |Fujitsu|Konami|007644|Twin16|bus latch|**all complete**|
-|Fujitsu|Konami|007786|Twin16|FB DRAM interface|WIP|
+|Fujitsu|Konami|007786|Twin16|FB DRAM interface|**all complete**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**all complete**|
 |NEC|Sega|315-5012|System 1|sprite engine|**all complete**|
 |NEC|Taito|TC0030CMD|Taito C-Chip|security chip|**all complete**(embargoed)|
