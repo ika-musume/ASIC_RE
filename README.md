@@ -19,7 +19,7 @@ ASIC reverse engineering
 |Fujitsu|Konami|007786|Twin16|FB DRAM interface|**all complete**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**all complete**|
 |NEC|Sega|315-5012|System 1|sprite engine|**all complete**|
-|NEC|Taito|TC0030CMD|Taito C-Chip|security chip|**all complete**(embargoed)|
+|NEC|Taito|65012-209|Taito C-Chip|security chip|**all complete**|
 |NEC|Seta|X1-001A|TNZS|sprite engine|WIP|
 |NEC|Seta|X1-002A|TNZS|sprite engine|Pending|
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|**all complete** - see [IKASCC]( https://github.com/ika-musume/IKASCC )|
