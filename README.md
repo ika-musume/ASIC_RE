@@ -14,7 +14,7 @@ ASIC reverse engineering
 |Fujitsu|Fujitsu|MB14506|Bubble System|Timings|**all complete**|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|**all complete**|
 |Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|WIP|
-|Fujitsu|Sega|315-5211|Outrun|sprite engine|WIP|
+|Fujitsu|Sega|315-5211|Outrun|sprite engine|**all complete**|
 |Fujitsu|Konami|007644|Twin16|bus latch|**all complete**|
 |Fujitsu|Konami|007786|Twin16|FB DRAM interface|**all complete**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**all complete**|
