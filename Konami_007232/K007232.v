@@ -122,8 +122,8 @@ end
 
 //div1024
 wire            clk_div1024 = div256_prescaler[7];
-wire            clk_div1024_ncen = div256_prescaler == 8'd128 & clk_div4_pcen;
-wire            clk_div1024_pcen = div256_prescaler == 8'd0 & clk_div4_pcen;
+wire            clk_div1024_ncen = (div256_prescaler == 8'd128) && clk_div4_pcen;
+wire            clk_div1024_pcen = (div256_prescaler == 8'd0) && clk_div4_pcen;
 
 
 
@@ -185,7 +185,7 @@ end
 reg             ch1_pre_dirty;
 always @(posedge mclk) begin
     if(reg0_wr || reg1_wr) ch1_pre_dirty <= 1'b1;
-    else begin if(clk_div2) begin
+    else begin if(clk_div2_pcen) begin
         ch1_pre_dirty <= 1'b0;
     end end
 end
@@ -273,7 +273,7 @@ K007232_cntr #(.DW(5)) u_ch1cntr3 (
 reg             ch2_pre_dirty;
 always @(posedge mclk) begin
     if(reg6_wr || reg7_wr) ch2_pre_dirty <= 1'b1;
-    else begin if(clk_div2) begin
+    else begin if(clk_div2_pcen) begin
         ch2_pre_dirty <= 1'b0;
     end end
 end
@@ -379,12 +379,7 @@ K007232_cntr #(.DW(4)) u_ck2m (
 
 assign  o_CK2M = reg0[5] ? clk_div1024 : ck2m_q == 4'd15;
 
-
-
-
 endmodule
-
-
 
 module K007232_cntr #(parameter DW = 4) (
     input   wire                i_EMUCLK, //emulator master clock
