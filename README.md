@@ -8,7 +8,7 @@ ASIC reverse engineering
 |Yamaha|Yamaha|YM2151|OPM|FM synth|**all complete** - see [IKAOPM]( https://github.com/ika-musume/IKAOPM )|
 |Yamaha|Yamaha|YM3438|OPN2C|FM synth|WIP - see [IKAOPN]( https://github.com/ika-musume/IKAOPN )|
 |Yamaha|Yamaha|YM3812|OPL2|FM synth|WIP - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
-|Yamaha|Yamaha|YM2413|OPLL|FM synth|decapped - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
+|Yamaha|Yamaha|YM2413|OPLL|FM synth|**all complete** - see [IKAOPLL]( https://github.com/ika-musume/IKAOPLL ) |
 |Yamaha|Yamaha|Y8950|MSX-AUDIO|FM synth|preparing|
 |Yamaha|Konami|005297|Bubble System|BMC|**all complete**|
 |Fujitsu|Fujitsu|MB14506|Bubble System|Timings|**all complete**|
