@@ -294,7 +294,7 @@ end
 always @(posedge mclk) begin
     if(mrst) vcntr <= 9'd0;
     else begin if(vclk_pcen) begin
-        vcntr <= vcntr == 9'd511 ? 9'd248 : vcntr + 9'd1;
+        if(i_TEST[1]) vcntr <= vcntr == 9'd511 ? 9'd248 : vcntr + 9'd1;
     end end
 end
 
