@@ -29,9 +29,9 @@ ASIC reverse engineering
 |Toshiba|Taito|TC0640FDP|F3|PPU|Pending|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
 |LSI Logic|Toaplan|GP9001|Toaplan S2|VDP|WIP|
-|OKI|Konami|007232|Salamander|PCM|**schematization done**|
+|OKI|Konami|007232|Salamander|PCM|**stable core**|
 |OKI|Konami|007781|Twin16|pixel SR|**schematization done**|
 |OKI|Konami|007785|Twin16|sprite addr gen|**schematization done**|
-|Sharp|Konami|005292|Bubble System|video timings|**schematization done**|
+|Sharp|Konami|005292|Bubble System|video timings|**stable core**|
 |Sharp|Sharp|LH5080|Z80|CPU|WIP - side project|
 |Hitachi|Sega|FD1094|System 16|security chip|cell identification done|
