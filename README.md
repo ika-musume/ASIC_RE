@@ -24,11 +24,11 @@ ASIC reverse engineering
 |NEC|Taito|65012-209|Taito C-Chip|security chip|**schematization done**|
 |NEC|Seta|X1-001A|TNZS|sprite engine|Pending|
 |NEC|Seta|X1-002A|TNZS|sprite engine|Pending|
-|NEC|ASCII|S1990|MSX turboR|bus interface|WIP|
+|NEC|ASCII|S1990|MSX turboR|bus interface|cell identification|
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|**stable core** - see [IKASCC]( https://github.com/ika-musume/IKASCC )|
 |Toshiba|Taito|TC0640FDP|F3|PPU|Pending|
 |Toshiba|Seibu|SEI300|Seibu Cup Soccer|math chip|preparing|
-|LSI Logic|Toaplan|GP9001|Toaplan S2|VDP|WIP|
+|LSI Logic|Toaplan|GP9001|Toaplan S2|VDP|cell identification|
 |OKI|Konami|007232|Salamander|PCM|**stable core**|
 |OKI|Konami|007781|Twin16|pixel SR|**schematization done**|
 |OKI|Konami|007785|Twin16|sprite addr gen|**schematization done**|
