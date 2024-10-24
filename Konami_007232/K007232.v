@@ -281,13 +281,13 @@ end
 //prescaler counter macros
 wire    [3:0]   ch2_pre0_q, ch2_pre1_q, ch2_pre2_q;
 wire    [11:0]  ch2_pre_q = {ch2_pre2_q, ch2_pre1_q, ch2_pre0_q};
-wire            ch2_pre1_cnt = (ch2_pre0_q == 4'd15) & clk_div4;
-wire            ch2_pre2_cnt = reg6[5] ? clk_div4 : ch2_pre1_cnt & (ch2_pre1_q == 4'd15);
+wire            ch2_pre1_cnt = (ch2_pre0_q == 4'd15) & ~clk_div4;
+wire            ch2_pre2_cnt = reg6[5] ? ~clk_div4 : ch2_pre1_cnt & (ch2_pre1_q == 4'd15);
 wire            ch2_pre_co = reg6[4] ? ch2_pre1_cnt & (ch2_pre1_q == 4'd15) : ch2_pre2_cnt & (ch2_pre2_q == 4'd15);
 wire            ch2_pre_ld = ch2_pre_co | ch2_pre_dirty;
 
 K007232_cntr #(.DW(4)) u_ch2pre0 (
-    .i_EMUCLK(mclk), .i_PCEN(clk_div2_pcen), .i_RST(mrst), .i_LD(ch2_pre_ld), .i_CNT(clk_div4), .i_D(reg7[3:0]), .o_Q(ch2_pre0_q)
+    .i_EMUCLK(mclk), .i_PCEN(clk_div2_pcen), .i_RST(mrst), .i_LD(ch2_pre_ld), .i_CNT(~clk_div4), .i_D(reg7[3:0]), .o_Q(ch2_pre0_q)
 );
 
 K007232_cntr #(.DW(4)) u_ch2pre1 (
