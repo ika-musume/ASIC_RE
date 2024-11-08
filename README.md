@@ -20,7 +20,8 @@ ASIC reverse engineering
 |Fujitsu|Konami|007644|Twin16|bus latch|**schematization done**|
 |Fujitsu|Konami|007786|Twin16|FB DRAM interface|**schematization done**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**schematization done**|
-|NEC|Sega|315-5012|System 1|sprite engine|**schematization done**|
+|NEC|Sega|315-5011|System 1|sprite line comparator|**stable core**|
+|NEC|Sega|315-5012|System 1|sprite engine|**stable core**|
 |NEC|Taito|65012-209|Taito C-Chip|security chip|**schematization done**|
 |NEC|Seta|X1-001A|TNZS|sprite engine|Pending|
 |NEC|Seta|X1-002A|TNZS|sprite engine|Pending|
