@@ -52,11 +52,14 @@ reg     [1:0]   bmcclk_sr;
 reg             bmcclk_sr_z;
 assign  o_BMCCLK = bmcclk_sr[0] & bmcclk_sr_z;
 always @(posedge i_EMUCLK) begin
-    if(i_BMCHALT) bmcclk_sr <= 2'b00;
-    else begin if(ncen) begin
-        bmcclk_sr[0] <= bmcclk_sr[1];
-        bmcclk_sr[1] <= ~&{bmcclk_sr};
-    end end
+    if(!i_RST_n) bmcclk_sr <= 2'b00;
+    else begin
+        if(i_BMCHALT) bmcclk_sr <= 2'b00;
+        else begin if(ncen) begin
+            bmcclk_sr[0] <= bmcclk_sr[1];
+            bmcclk_sr[1] <= ~&{bmcclk_sr};
+        end end
+    end
 
     if(pcen) bmcclk_sr_z <= bmcclk_sr[0];
 end
@@ -65,8 +68,11 @@ reg     [5:0]   bmcclk_cen_sr;
 assign  o_BMCCLK_NCEN = bmcclk_cen_sr[2] & ncen;
 assign  o_BMCCLK_PCEN = bmcclk_cen_sr[5] & pcen;
 always @(posedge i_EMUCLK) if(ncen || pcen) begin
-    bmcclk_cen_sr[0] <= ({bmcclk_sr[0], bmcclk_sr_z} == 2'b10);
-    bmcclk_cen_sr[5:1] <= bmcclk_cen_sr[4:0];
+    if(!i_RST_n) bmcclk_cen_sr <= 6'b000000;
+    else begin
+        bmcclk_cen_sr[0] <= ({bmcclk_sr[0], bmcclk_sr_z} == 2'b10);
+        bmcclk_cen_sr[5:1] <= bmcclk_cen_sr[4:0];
+    end
 end
 
 
@@ -113,18 +119,24 @@ end
 //////  MB3908 sense amplifier timings
 ////
 
-always @(posedge i_EMUCLK) if(pcen) begin
-    if(!i_BSS_n) o_CLAMP_n <= 1'b1;
-    else begin
-             if(mcyc == 7'd70)                      o_CLAMP_n <= 1'b0;
-        else if(mcyc >= 7'd108 && mcyc <= 7'd111)   o_CLAMP_n <= 1'b1;
+always @(posedge i_EMUCLK) begin
+    if(!i_RST_n) begin
+        o_CLAMP_n <= 1'b1;
+        o_STROBE <= 1'b0;
     end
+    else begin if(pcen) begin
+        if(!i_BSS_n) o_CLAMP_n <= 1'b1;
+        else begin
+                 if(mcyc == 7'd70)                      o_CLAMP_n <= 1'b0;
+            else if(mcyc >= 7'd108 && mcyc <= 7'd111)   o_CLAMP_n <= 1'b1;
+        end
 
-    if(!i_BSS_n) o_STROBE <= 1'b0;
-    else begin
-             if(mcyc >= 7'd92 && mcyc <= 7'd95)     o_STROBE <= 1'b1;
-        else if(mcyc >= 7'd108 && mcyc <= 7'd111)   o_STROBE <= 1'b0;
-    end
+        if(!i_BSS_n) o_STROBE <= 1'b0;
+        else begin
+                 if(mcyc >= 7'd92 && mcyc <= 7'd95)     o_STROBE <= 1'b1;
+            else if(mcyc >= 7'd108 && mcyc <= 7'd111)   o_STROBE <= 1'b0;
+        end
+    end end
 end
 
 
@@ -143,7 +155,7 @@ always @(posedge i_EMUCLK) begin
     //swap gate
     if(!i_RST_n) swap_n <= 1'b1;
     else begin if(pcen) begin
-        if(mcyc == 7'd72)                           swap_n <= ~(o_SWAP_n & ~i_SWAPEN_n)
+        if(mcyc == 7'd72)                           swap_n <= ~(o_SWAP_n & ~i_SWAPEN_n);
     end end
 
     //generator enable
@@ -163,7 +175,7 @@ always @(posedge i_EMUCLK) begin
     //bubble cut
     if(!i_RST_n) cut_n <= 1'b1;
     else begin if(pcen) begin
-             if(!rep_n && mcyc == 7'35)             cut_n <= 1'b0;
+             if(!rep_n && mcyc == 7'd35)            cut_n <= 1'b0;
         else if(mcyc == 7'd38 || mcyc == 7'd39)     cut_n <= 1'b1;
     end end
 end

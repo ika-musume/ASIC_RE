@@ -138,7 +138,7 @@ always @(posedge i_MCLK) begin
     end
 end
 
-assign  CLK2P_n = ~(A59 | CLK4P_n);
+assign  CLK2P_n = (A59 | CLK4P_n);
 assign  o_CLK2M_PCEN_n = CLK2P_n;
 
 
@@ -148,7 +148,7 @@ assign  o_CLK2M_PCEN_n = CLK2P_n;
 ////
 
 //this counter is for ring counter synchronization; they follow the order below:
-//rot8    3 4 5 6 7 0 1 2 3 4 5 6
+//rot8    4 5 6 7 0 1 2 3 4 5 6 7
 //rot20   0   1   2   3   4   5
 
 reg     [3:0]   por_cntr = 4'b1111; //cascaded T flip flops; A23 A24 A25 A27
@@ -202,51 +202,49 @@ assign  o_SYS_RUN_FLAG_SET_n = ~(o_SYS_RST_n & ~o_ROT20_n[19]);
 SRNAND C30 (.i_CLK(i_MCLK), .i_CEN_n(CLK4P_n), .i_S_n(o_SYS_RST_n), .i_R_n(o_SYS_RUN_FLAG_SET_n), .o_Q(), .o_Q_n(o_SYS_RUN_FLAG));
 
 
-`ifdef K005297_DEBUG
+
 ///////////////////////////////////////////////////////////
 //////  RING COUNTER DECODER
 ////
 
-wire            __REF_4M = ~i_MCLK;
-reg     [4:0]   __ROT20_VALUE;
-reg     [2:0]   __ROT8_VALUE;
+reg     [4:0]   debug_rot20_val;
+reg     [2:0]   debug_rot8_val;
 
 always @(*) begin
     case(o_ROT20_n)
-        20'b1111_1111_1111_1111_1110: __ROT20_VALUE <= 5'd0;
-        20'b1111_1111_1111_1111_1101: __ROT20_VALUE <= 5'd1;
-        20'b1111_1111_1111_1111_1011: __ROT20_VALUE <= 5'd2;
-        20'b1111_1111_1111_1111_0111: __ROT20_VALUE <= 5'd3;
-        20'b1111_1111_1111_1110_1111: __ROT20_VALUE <= 5'd4;
-        20'b1111_1111_1111_1101_1111: __ROT20_VALUE <= 5'd5;
-        20'b1111_1111_1111_1011_1111: __ROT20_VALUE <= 5'd6;
-        20'b1111_1111_1111_0111_1111: __ROT20_VALUE <= 5'd7;
-        20'b1111_1111_1110_1111_1111: __ROT20_VALUE <= 5'd8;
-        20'b1111_1111_1101_1111_1111: __ROT20_VALUE <= 5'd9;
-        20'b1111_1111_1011_1111_1111: __ROT20_VALUE <= 5'd10;
-        20'b1111_1111_0111_1111_1111: __ROT20_VALUE <= 5'd11;
-        20'b1111_1110_1111_1111_1111: __ROT20_VALUE <= 5'd12;
-        20'b1111_1101_1111_1111_1111: __ROT20_VALUE <= 5'd13;
-        20'b1111_1011_1111_1111_1111: __ROT20_VALUE <= 5'd14;
-        20'b1111_0111_1111_1111_1111: __ROT20_VALUE <= 5'd15;
-        20'b1110_1111_1111_1111_1111: __ROT20_VALUE <= 5'd16;
-        20'b1101_1111_1111_1111_1111: __ROT20_VALUE <= 5'd17;
-        20'b1011_1111_1111_1111_1111: __ROT20_VALUE <= 5'd18;
-        20'b0111_1111_1111_1111_1111: __ROT20_VALUE <= 5'd19;
+        20'b1111_1111_1111_1111_1110: debug_rot20_val <= 5'd0;
+        20'b1111_1111_1111_1111_1101: debug_rot20_val <= 5'd1;
+        20'b1111_1111_1111_1111_1011: debug_rot20_val <= 5'd2;
+        20'b1111_1111_1111_1111_0111: debug_rot20_val <= 5'd3;
+        20'b1111_1111_1111_1110_1111: debug_rot20_val <= 5'd4;
+        20'b1111_1111_1111_1101_1111: debug_rot20_val <= 5'd5;
+        20'b1111_1111_1111_1011_1111: debug_rot20_val <= 5'd6;
+        20'b1111_1111_1111_0111_1111: debug_rot20_val <= 5'd7;
+        20'b1111_1111_1110_1111_1111: debug_rot20_val <= 5'd8;
+        20'b1111_1111_1101_1111_1111: debug_rot20_val <= 5'd9;
+        20'b1111_1111_1011_1111_1111: debug_rot20_val <= 5'd10;
+        20'b1111_1111_0111_1111_1111: debug_rot20_val <= 5'd11;
+        20'b1111_1110_1111_1111_1111: debug_rot20_val <= 5'd12;
+        20'b1111_1101_1111_1111_1111: debug_rot20_val <= 5'd13;
+        20'b1111_1011_1111_1111_1111: debug_rot20_val <= 5'd14;
+        20'b1111_0111_1111_1111_1111: debug_rot20_val <= 5'd15;
+        20'b1110_1111_1111_1111_1111: debug_rot20_val <= 5'd16;
+        20'b1101_1111_1111_1111_1111: debug_rot20_val <= 5'd17;
+        20'b1011_1111_1111_1111_1111: debug_rot20_val <= 5'd18;
+        20'b0111_1111_1111_1111_1111: debug_rot20_val <= 5'd19;
     endcase
 
     case(o_ROT8)
-        8'b0000_0001: __ROT8_VALUE <= 3'd0;
-        8'b0000_0010: __ROT8_VALUE <= 3'd1;
-        8'b0000_0100: __ROT8_VALUE <= 3'd2;
-        8'b0000_1000: __ROT8_VALUE <= 3'd3;
-        8'b0001_0000: __ROT8_VALUE <= 3'd4;
-        8'b0010_0000: __ROT8_VALUE <= 3'd5;
-        8'b0100_0000: __ROT8_VALUE <= 3'd6;
-        8'b1000_0000: __ROT8_VALUE <= 3'd7;
+        8'b0000_0001: debug_rot8_val <= 3'd0;
+        8'b0000_0010: debug_rot8_val <= 3'd1;
+        8'b0000_0100: debug_rot8_val <= 3'd2;
+        8'b0000_1000: debug_rot8_val <= 3'd3;
+        8'b0001_0000: debug_rot8_val <= 3'd4;
+        8'b0010_0000: debug_rot8_val <= 3'd5;
+        8'b0100_0000: debug_rot8_val <= 3'd6;
+        8'b1000_0000: debug_rot8_val <= 3'd7;
     endcase
 end
-`endif
 
 endmodule
 
