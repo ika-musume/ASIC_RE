@@ -10,9 +10,9 @@ ASIC reverse engineering
 |Yamaha|Yamaha|YM3812|OPL2|FM synth|cell identification done - see [IKAOPL]( https://github.com/ika-musume/IKAOPL ) |
 |Yamaha|Yamaha|YM2413|OPLL|FM synth|**stable core** - see [IKAOPLL]( https://github.com/ika-musume/IKAOPLL ) |
 |Yamaha|ASCII|Y8950|MSX-AUDIO|FM synth|decapped|
-|Yamaha|ASCII|V9958|MSX2+|VDP|schematizaion - see [IKA9958]( https://github.com/ika-musume/IKA9958 )|
+|Yamaha|ASCII|V9958|MSX2+|VDP|schematization - see [IKA9958]( https://github.com/ika-musume/IKA9958 )|
+|Yamaha|ASCII|R800|turboR MSX|microprocessor|schematization - see [IKA800]( https://github.com/ika-musume/IKA800 )|
 |Yamaha|Konami|005297|Bubble System|BMC|**stable core**|
-|Yamaha|Yamaha|F71005|calculator|controller|cell identification done|
 |Fujitsu|Fujitsu|MB14506|Bubble System|Timings|**schematization done**|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|**schematization done**|
 |Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|decapped|
@@ -20,11 +20,11 @@ ASIC reverse engineering
 |Fujitsu|Konami|007644|Twin16|bus latch|**schematization done**|
 |Fujitsu|Konami|007786|Twin16|FB DRAM interface|**schematization done**|
 |Fujitsu|Konami|007787|Twin16|pixel SR|**schematization done**|
-|NEC|NEC|65046-059|calculator|glue logic|cell identification|
+|NEC|ASCII|S1990|turboR MSX|glue logic|cell identification|
 |NEC|Sega|315-5011|System 1|sprite line comparator|**stable core**|
 |NEC|Sega|315-5012|System 1|sprite engine|**stable core**|
 |NEC|Taito|65012-209|Taito C-Chip|security chip|**schematization done**|
-|NEC|Seta|X1-001A|TNZS|sprite engine|Pending|
+|NEC|Seta|X1-001A|TNZS|sprite engine|cell identification|
 |NEC|Seta|X1-002A|TNZS|sprite engine|Pending|
 |Toshiba|Konami|051649|City Bomber<br> MSX carts|wavetable sound|**stable core** - see [IKASCC]( https://github.com/ika-musume/IKASCC )|
 |Toshiba|Taito|TC0640FDP|F3|PPU|Pending|
