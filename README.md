@@ -15,7 +15,7 @@ ASIC reverse engineering
 |Yamaha|Konami|005297|Bubble System|BMC|**stable core**|
 |Fujitsu|Fujitsu|MB14506|Bubble System|Timings|**schematization done**|
 |Fujitsu|Taito|PC080SN|Rastan<br> Darius|tilemaps|**schematization done**|
-|Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|decapped|
+|Fujitsu|Taito|PC090OJ|Rastan<br> Rainbow Islands|sprite engine|cell identification|
 |Fujitsu|Sega|315-5211|Outrun|sprite engine|**schematization done**|
 |Fujitsu|Konami|007644|Twin16|bus latch|**schematization done**|
 |Fujitsu|Konami|007786|Twin16|FB DRAM interface|**schematization done**|
